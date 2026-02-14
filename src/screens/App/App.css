@@ -1,0 +1,32 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 120px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 15em;
+  will-change: filter;
+  transition: filter 300ms;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.body {
+  overflow-x: hidden;
+  width: 100%;
+}
