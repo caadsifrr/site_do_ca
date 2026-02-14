@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# CAADS - Centro Acadêmico de Análise e Desenvolvimento de Sistemas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site oficial do Centro Acadêmico de Anaálise e Desenvolvimento de Sistemas do IFRR
 
-Currently, two official plugins are available:
+Tecnologias Utilizadas:
+- React -> Biblioteca para UI
+- TypeScript -> Superset JavaScript com tipagem
+- Vite -> Build tool e servidor de desenvolvimento
+- CSS Modules -> Estilização
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pré-requisitos para rodar (IMPORTANTE)
 
-## React Compiler
+Antes de começar, você precisa ter instalado em sua maquina:
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- Node.js -> Procure na internet, versão 18+
+- Git -> Para clonar o repo
+- Um editor de código - VS Code é o que usamos
 
-## Expanding the ESLint configuration
+Como executar o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1° Clone o projeto
+Vá na pasta de desenvolvimento sua:
+cd C:\User\fulano\documentos\web\ --> EXEMPLO
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+git clone https://github.com/Gutganvisk/site_do_ca
+cd site-do-ca
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2° Instale as dependencias
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3° Execute o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4° Acesse no navegador
+
+Abra http://localhost:5173 para ver o projeto.
+
+# Como contribuir
+Faça um fork do projeto
+
+1° Crie uma branch para sua feature (git checkout -b feature/AmazingFeature) Explicação: feature é a branch, depois da "/" é o nome da feature.
+
+Outras formas de nome: 
+feature/nome-da-feature    → novas funcionalidades
+bugfix/descricao-do-bug    → correções
+hotfix/descricao           → correções urgentes
+docs/o-que-foi-alterado    → documentação
+refactor/o-que-mudou       → refatoração de código
+test/adiciona-testes       → testes
+
+2° Commit suas mudanças (git commit -m 'Add some AmazingFeature')
+
+3° Push para a branch (git push origin feature/AmazingFeature)
+
+4° Abra um Pull Request:
+"Ei, dono do projeto! Fiz umas melhorias no meu fork. Dá uma olhada e, se estiver bom, puxa (pull) meu código para o seu repositório!"
+
